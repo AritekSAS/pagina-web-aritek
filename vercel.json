@@ -1,0 +1,10 @@
+{
+  "cleanUrls": true,
+  "builds": [
+    { "src": "01-pagina-web/**", "use": "@vercel/static" }
+  ],
+  "routes": [
+    { "src": "/", "dest": "01-pagina-web/index.html" },
+    { "src": "/(.*)", "dest": "01-pagina-web/$1" }
+  ]
+}

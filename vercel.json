@@ -1,13 +1,8 @@
 {
   "version": 2,
-  "builds": [
-    { "src": "index.html", "use": "@vercel/static" },
-    { "src": "styles.css", "use": "@vercel/static" },
-    { "src": "script.js", "use": "@vercel/static" },
-    { "src": "public/**/*", "use": "@vercel/static" }
-  ],
-  "routes": [
-    { "src": "/(.*)", "dest": "/index.html" }
+  "public": "01-PAGINA-WEB",
+  "rewrites": [
+    { "source": "/(.*)", "destination": "/index.html" }
   ],
   "redirects": [
     {
@@ -22,4 +17,5 @@
     }
   ]
 }
+
 

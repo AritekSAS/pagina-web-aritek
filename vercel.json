@@ -1,0 +1,17 @@
+{
+  "builds": [
+    { "src": "index.html", "use": "@vercel/static" }
+  ],
+  "redirects": [
+    {
+      "source": "/wp-admin",
+      "destination": "https://presentaciones.aritek.com.co/wp-admin",
+      "permanent": false
+    },
+    {
+      "source": "/wp-admin/:path*",
+      "destination": "https://presentaciones.aritek.com.co/wp-admin/:path*",
+      "permanent": false
+    }
+  ]
+}

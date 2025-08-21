@@ -1,0 +1,1 @@
+console.log('ARITEK placeholder site loaded');

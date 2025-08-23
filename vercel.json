@@ -1,9 +1,4 @@
 {
-  "version": 2,
-  "public": "01-PAGINA-WEB",
-  "rewrites": [
-    { "source": "/(.*)", "destination": "/index.html" }
-  ],
   "redirects": [
     {
       "source": "/wp-admin",
@@ -17,5 +12,6 @@
     }
   ]
 }
+
 
 

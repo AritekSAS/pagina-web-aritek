@@ -1,10 +1,25 @@
 {
   "version": 2,
-  "cleanUrls": true,
-  "trailingSlash": false,
-  "rewrites": [
-    { "source": "/wp-admin", "destination": "https://presentaciones.aritek.com.co/wp-admin" },
-    { "source": "/wp-admin/:path*", "destination": "https://presentaciones.aritek.com.co/wp-admin/:path*" }
+  "builds": [
+    { "src": "index.html", "use": "@vercel/static" },
+    { "src": "styles.css", "use": "@vercel/static" },
+    { "src": "script.js", "use": "@vercel/static" },
+    { "src": "public/**/*", "use": "@vercel/static" }
+  ],
+  "redirects": [
+    {
+      "source": "/wp-admin",
+      "destination": "https://presentaciones.aritek.com.co/wp-admin",
+      "permanent": false
+    },
+    {
+      "source": "/wp-admin/:path*",
+      "destination": "https://presentaciones.aritek.com.co/wp-admin/:path*",
+      "permanent": false
+    }
+  ],
+  "routes": [
+    { "src": "/", "dest": "/index.html" }
   ],
   "headers": [
     {
@@ -15,7 +30,3 @@
     }
   ]
 }
-
-
-
-
